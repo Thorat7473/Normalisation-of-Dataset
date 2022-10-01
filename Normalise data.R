@@ -1,7 +1,5 @@
 uterus_data=read.csv("C:/Users/hp/Downloads/Cancer Genomics/Uterus.can.csv")
 uterus_data
-data1= data[,-1]   #remove 1 column
-data1
 mat= as.matrix(data1)
 rownames(mat)= data[,1]    #matrix
 View(mat)
