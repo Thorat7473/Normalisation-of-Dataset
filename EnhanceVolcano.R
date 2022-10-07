@@ -18,5 +18,8 @@ mat= as.data.frame(mat)
 num = which(is.nan(mat$pval))
 mat[num,'pval']=1
 
+library(EnhanceValcano)
+pdf('volcano_plot.pdf',width = 10, height = 10)
 EnhancedVolcano(mat,lab = rownames(mat),x='log2FC',y= 'pval')
+dev.off()
 
